@@ -40,6 +40,6 @@ jobs:
           command: npm run backend:deploy
 
 #send environment variables from CircleCI to Elastic Beanstalk through eb-cli
-      - run:
-          name: set environment variables
-          command: eb setenv AWS_ACCESS_KEY_ID = $AWS_ACCESS_KEY_ID AWS_SECRET_ACCESS_KEY = $AWS_SECRET_ACCESS_KEY AWS_DEFAULT_REGION = $AWS_DEFAULT_REGION
+     # - run:
+      #    name: set environment variables
+      #    command: eb setenv AWS_ACCESS_KEY_ID = $AWS_ACCESS_KEY_ID AWS_SECRET_ACCESS_KEY = $AWS_SECRET_ACCESS_KEY AWS_DEFAULT_REGION = $AWS_DEFAULT_REGION
