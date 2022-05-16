@@ -10,20 +10,20 @@ jobs:
       - node/install
       - checkout
       - run:
-        name: install frontend
-        command: npm run frontend:install
+          name: install frontend
+          command: npm run frontend:install
       - run:
-        name: install backend
-        command: npm run backend:install
+          name: install backend
+          command: npm run backend:install
       - run:
-        name: build frontend
-        command: npm run frontend:build
+          name: build frontend
+          command: npm run frontend:build
       - run:
-        name: build backend
-        command: npm run backend:build
+          name: build backend
+          command: npm run backend:build
       - run:
-        name: deploy frontend
-        command: npm run frontend:deploy
+          name: deploy frontend
+          command: npm run frontend:deploy
       - run:
-        name: deploy backend
-        command: npm run backend:deploy
+          name: deploy backend
+          command: npm run backend:deploy
