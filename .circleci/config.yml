@@ -12,10 +12,10 @@ jobs:
       - checkout
       - aws-cli/setup
       - aws-elastic-beanstalk/setup
-      
+
       - restore-frontend-cache:
           keys:
-            - frontend-dependencies-{{checkSum "package.json"}}
+            - frontend-dependencies-{{checksum "package.json"}}
             - frontend-dependencies-
 
       - run:
@@ -29,7 +29,7 @@ jobs:
 
       - restore-backend-cache:
           keys:
-            - backend-dependencies-{{checkSum "package.json"}}
+            - backend-dependencies-{{checksum "package.json"}}
             - backend-dependencies-
 
       - run:
