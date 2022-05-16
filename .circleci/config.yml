@@ -12,12 +12,28 @@ jobs:
       - checkout
       - aws-cli/setup
       - aws-elastic-beanstalk/setup
+      - restore-frontend-cache:
+          keys:
+            - frontend-dependencies-{{checkSum "package.json"}}
+            - frontend-dependencies-
       - run:
           name: install frontend
           command: npm run frontend:install
+      - save-frontend-cache:
+          paths:
+            - node_modules
+          key: frontend-dependencies-
+      - restore-backend-cache:
+          keys:
+            - backend-dependencies-{{checkSum "package.json"}}
+            - backend-dependencies-
       - run:
           name: install backend
           command: npm run backend:install
+       save-backend-cache:
+          paths:
+            - node_modules
+          key: backend-dependencies-
       - run:
           name: build frontend
           command: npm run frontend:build
