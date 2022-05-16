@@ -31,13 +31,13 @@ jobs:
           command: npm run backend:build
 
 #send environment variables from CircleCI to Elastic Beanstalk through eb-cli
-      - run:
-          name: initialize eb
-          command: eb init --region us-east-1 udagram-api
+  #    - run:
+   #       name: initialize eb
+   #       command: eb init --region us-east-1 udagram-api
       
-      - run:
-          name: set environment variables
-          command: eb setenv AWS_ACCESS_KEY_ID = $AWS_ACCESS_KEY_ID AWS_SECRET_ACCESS_KEY = $AWS_SECRET_ACCESS_KEY AWS_DEFAULT_REGION = $AWS_DEFAULT_REGION
+    #  - run:
+    #      name: set environment variables
+     #     command: eb setenv AWS_ACCESS_KEY_ID = $AWS_ACCESS_KEY_ID AWS_SECRET_ACCESS_KEY = $AWS_SECRET_ACCESS_KEY AWS_DEFAULT_REGION = $AWS_DEFAULT_REGION
 
 #commands to deploy the frontend and backend
       - run:
