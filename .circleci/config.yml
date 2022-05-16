@@ -7,12 +7,13 @@ jobs:
   build:
     docker:
       - image: "cimg/base:stable"
+#installing CircleCI project dependencies
     steps: 
       - node/install
       - checkout
       - aws-cli/setup
       - aws-elastic-beanstalk/setup
-
+#commands to install the frontend and backend
       - run:
           name: install frontend
           command: npm run frontend:install
@@ -20,7 +21,7 @@ jobs:
       - run:
           name: install backend
           command: npm run backend:install
-
+#commands to build the frontend and backend
       - run:
           name: build frontend
           command: npm run frontend:build
@@ -28,7 +29,7 @@ jobs:
       - run:
           name: build backend
           command: npm run backend:build
-
+#commands to deploy the frontend and backend
       - run:
           name: deploy frontend
           command: npm run frontend:deploy
