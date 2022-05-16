@@ -1,4 +1,5 @@
 # Udagram
+Frontend URL: http://udagram-bucket123456.s3-website-us-east-1.amazonaws.com/home
 
 ##Infrastructure Description
 
@@ -20,8 +21,6 @@ A Node.js Full-Stack application that supports user registration, log in, and up
 -Elastic Beanstalk for hosting the backend.
 
 ```
-
-
 
 ## Pipeline Process
 First, the dependencies are installed for both the frontend and backend. Then, the build scripts for both ends are triggered. An AWS S3 command is then run to deploy the newly built frontend from the ‘Archive.zip’. Last, using the ElasticBeanstalk CLI, we deploy the fresh backend build to the elastic beanstalk environment.
