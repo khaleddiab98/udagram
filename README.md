@@ -4,6 +4,9 @@
 
 A Node.js Full-Stack application that supports user registration, log in, and uploading of photos. The Database was created using AWS RDS and uses PostgreSQL. The front-end was created using HTML, CSS, TypeScript, JavaScript, and Angular, and is hosted on AWS S3. The Backend was created using TypeScript, JavaScript, Express.js, and Sequelize for database communication. The application utilizes an automated pipeline using CircleCI and is automatically triggered on change to the GitHub repo.
 
+## CirclCI Status Badge
+[![CircleCI](https://circleci.com/gh/khaleddiab98/udagram/tree/main.svg?style=svg)](https://circleci.com/gh/khaleddiab98/udagram/tree/main)
+
 ## Dependencies
 
 ```

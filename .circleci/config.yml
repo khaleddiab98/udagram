@@ -33,7 +33,7 @@ jobs:
 #send environment variables from CircleCI to Elastic Beanstalk through eb-cli
       - run:
           name: initialize eb
-          command: eb init --region $AWS_DEFAULT_REGION udagram-api
+          command: eb init --region us-east-1 udagram-api
       
       - run:
           name: set environment variables
