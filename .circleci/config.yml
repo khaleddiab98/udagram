@@ -8,8 +8,8 @@ jobs:
       - image: "cimg/base:stable"
     steps: 
       - node/install
-      - aws-cli/install
       - checkout
+      - aws-cli/setup
       - run:
           name: install frontend
           command: npm run frontend:install
