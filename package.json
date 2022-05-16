@@ -5,7 +5,7 @@
         "backend:install":"cd udagram-api && npm install",
         "frontend:build":"cd udagram-frontend && npm run build",
         "backend:build":"cd udagram-api && npm run build",
-        "frontend:deploy":"cd udagram-frontend && chmod +x ./bin/deploy.sh && ./bin/deploy.sh",
-        "backend:deploy":"cd udagram-api && chmod +x ./bin/deploy.sh && ./bin/deploy.sh"
+        "frontend:deploy":"cd udagram-frontend/bin && chmod +x deploy.sh && deploy.sh",
+        "backend:deploy":"cd udagram-api/bin && chmod +x deploy.sh && deploy.sh"
     }
 }
