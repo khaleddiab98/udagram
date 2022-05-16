@@ -25,7 +25,7 @@ jobs:
       - save-frontend-cache:
           paths:
             - node_modules
-          key: frontend-dependencies-
+          key: frontend-dependencies-{{checksum "package.json"}}
 
       - restore-backend-cache:
           keys:
@@ -39,7 +39,7 @@ jobs:
       - save-backend-cache:
           paths:
             - node_modules
-          key: backend-dependencies-
+          key: backend-dependencies-{{checksum "package.json"}}
 
       - run:
           name: build frontend
